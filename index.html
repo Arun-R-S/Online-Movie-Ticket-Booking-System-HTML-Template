@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/compact_util.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/material-icon-outlined.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#7952b3">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="gilmer-font bg-light">
+
+	<!--Header Start-->
+	<header class="navbar p-t-20 p-b-20 shadow-bottom fixed-top navbar-expand-md navbar-dark bd-navbar bg-purple" id="headers">
+		<nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+			<a class=" navbar-brand me-2 f-w-600" id="page-title" href="/" aria-label="Bootstrap">
+				<img src="images/favicon.png" class="width-50 "> MoviesYet
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar"
+				aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor"
+					viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+					</path>
+				</svg>
+
+			</button>
+			<div class="p-b-5 p-l-20 collapse navbar-collapse " id="bdNavbar">
+				<ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+
+					<li class="nav-item  ">
+
+						<a class="nav-link active p-b-10" href="#">
+							<span class="material-icons-outlined f-s-25">home</span>
+							<span class="valign">Home</span>
+						</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link p-2" aria-current="true" href="movies.html">
+							<span class="material-icons-outlined f-s-25">
+								theaters
+							</span>
+							<span class="valign">Movies</span>
+						</a>
+					</li>
+					<form class="d-flex">
+
+						<input class="form-control me-2" type="search" placeholder="Search Movies" aria-label="Search">
+						<button class="btn btn-success text-light" type="submit">Search</button>
+					</form>
+				</ul>
+				<ul class="p-t-10 p-r-10 navbar-nav flex-row flex-wrap ms-md-auto">
+					<div class="dropdown">
+						<span class="f-s-35 color-white material-icons-outlined">
+							room
+						</span>
+						<button id="location-button" class="valign btn btn-secondary dropdown-toggle" type="button"
+							id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							Select Your Location
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="location-result">
+
+
+						</ul>
+
+					</div>
+
+				</ul>
+				<ul class="p-t-8 p-l-0 navbar-nav">
+					<button class="btn btn-danger">
+						<span class="p-r-10 material-icons-outlined">
+							vpn_key
+						</span>
+						<span>Sign in</span>
+					</button>
+				</ul>
+			</div>
+
+		</nav>
+	</header>
+
+
+
+	<!--Header End-->
+	<!--Gap-->
+
+		<div class="p-b-140" ></div>
+
+	<!--Gap end-->
+
+	<!--Main Content Start-->
+	<div class="container">
+		<h1 class="color-yellow raleway-bold-font f-s-70">Have you seen this movie yet?</h1>
+	</div>
+
+	<div class="container m-w-800 p-b-50 m-t-30 text-light">
+
+		<h2>
+			<span class="ic material-icons-outlined f-s-50 md-dark">
+				movie_filter
+			</span>
+			<span class="valign2">New Releases</span>
+		</h2>
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner b-r-8">
+				<div class="carousel-item active">
+					<img src="images/movies/master.jpg" class="d-block w-100 " alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="images/movies/karnan.jpg" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="images/movies/soorarai_potru.jpg" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+	</div>
+	<div class="bg-dark m-t-30 text-light p-t-30 p-b-30 text-dark">
+		<div class="cardz container col-lg-7">
+			<h2 class="text-light">
+				<span class="f-s-50 material-icons-outlined">
+					thumb_up
+				</span>
+				<span class="valign">Top Rated Movies</span>
+			</h2>
+			<div class="row row-cols-1 p-t-20 p-b-40 row-cols-md-3 g-4">
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/the-shawshank-redemption.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">The Shawshank Redemption</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 9.3/10
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/avengers-end-game.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Avengers Endgame</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 8.4/10
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/the-pursuit-of-happyness.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">The Pursuit of Happyness</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 8.0/10
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/avatar.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Avatar</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 7.8/10
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/fast-and-furious-7.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Fast & Furious 7</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 7.1/10
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card h-100">
+						<img src="images/top-rated/escape-rrom.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Escape Room</h5>
+							<span class="valign color-yellow material-icons-round">
+								grade
+							</span>
+							IMDB : 6.4/10
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+
+	</div>
+
+
+
+	<footer class="bg-white">
+		<!-- Copyrights -->
+		<div class="bg-light py-4">
+			<div class="container text-center">
+				<p class="text-muted mb-0 py-2"> MoviesYet © 2021 All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="js/main.js"></script>
+
+</html>
