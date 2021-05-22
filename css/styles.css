@@ -108,7 +108,7 @@ body{
     transition: 0.4s;
 }
 .card:hover{
-    -webkit-box-shadow: 0 14px 20px -9px white;
+    -webkit-box-shadow: 0 15px 20px -9px white;
        -moz-box-shadow: 0 15px 20px -9px white;
             box-shadow: 0 15px 20px -9px white;
 }
