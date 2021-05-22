@@ -108,8 +108,9 @@ body{
     transition: 0.4s;
 }
 .card:hover{
-    box-shadow: 0px 0px 30px white; 
- 
+    -webkit-box-shadow: 0 15px 20px -9px white;
+       -moz-box-shadow: 0 15px 20px -9px white;
+            box-shadow: 0 15px 20px -9px white;
 }
 .carousel-control-prev-icon{
     
