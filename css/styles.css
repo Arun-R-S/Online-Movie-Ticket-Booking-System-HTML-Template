@@ -1,13 +1,31 @@
-body{
+#main-body{
     background-image: linear-gradient(rgba(0, 0, 11, 0.8),
     rgba(0, 0, 0, 0.9)) , 
     url('../images/background.png');
+}
+a{
+    text-decoration: unset;
+}
+a:visited{
+    color:blue;
 }
 #page-title{
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
+}
+#visible_button{
+    background-color: white;
+    border: 1px solid #ced4da;
+}
+.b-b{
+    border: 3px black;
+}
+.rsa{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #headers{
     -webkit-transition: 0.4s;
@@ -79,6 +97,9 @@ body{
 }
 .color-red{
     color:red;
+}
+.bg-grey{
+    background-color: #eaebec;
 }
 .color-black{
     color: black;
