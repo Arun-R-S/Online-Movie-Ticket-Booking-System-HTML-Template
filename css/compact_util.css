@@ -596,6 +596,9 @@
 .m-t-a{margin-top: auto;}
 .m-b-a{margin-bottom: auto;}
 
+.m-a{
+    margin: auto;
+}
 /* Margin Left */
 .m-l-0 {margin-left: 0px;}
 .m-l-1 {margin-left: 1px;} .m-l-2 {margin-left: 2px;} .m-l-3 {margin-left: 3px;} .m-l-4 {margin-left: 4px;} .m-l-5 {margin-left: 5px;} .m-l-6 {margin-left: 6px;} .m-l-7 {margin-left: 7px;} .m-l-8 {margin-left: 8px;} .m-l-9 {margin-left: 9px;} .m-l-10 {margin-left: 10px;} .m-l-11 {margin-left: 11px;} .m-l-12 {margin-left: 12px;} .m-l-13 {margin-left: 13px;} .m-l-14 {margin-left: 14px;} .m-l-15 {margin-left: 15px;} .m-l-16 {margin-left: 16px;} .m-l-17 {margin-left: 17px;} .m-l-18 {margin-left: 18px;} .m-l-19 {margin-left: 19px;} .m-l-20 {margin-left: 20px;}

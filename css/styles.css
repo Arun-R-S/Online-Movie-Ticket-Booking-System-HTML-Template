@@ -7,6 +7,10 @@
 a{
     text-decoration: unset;
 }
+.flex-div{
+    align-items: center;
+  display: flex;
+}
 a:visited{
     color:blue;
 }
