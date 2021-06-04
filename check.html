@@ -1,0 +1,20 @@
+<head>
+    <!--Inserting the scripts once for the whole page-->
+    <script src="https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
+</head>
+<body>
+    <!--Inserting an icon-->
+    <div class='titanic titanic-checkbox'></div>
+
+    <!--Initializing-->
+    <script>
+        var titanic = new Titanic({
+          hover: true, // auto animated on hover (default true)
+          click: true  // auto animated on click/tap (default false)
+        });
+    </script>
+
+    <!--Clicking turns this icon on-->
+    <button onclick="titanic.on(getElementById('checkbox').value)">On</button>
+</body>
