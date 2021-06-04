@@ -28,8 +28,13 @@
   font-family: "ralewayExtraBold";
   src : url("https://raw.githubusercontent.com/17t104/fonts/main/raleway/Raleway-ExtraBold.ttf");
 }
+@font-face{
+  font-family: "robotoMedium";
+  src : url("https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKOzY.woff2") format('woff2');
+}
+
 .gilmer-font{
-  font-family: var(--bs-font-gilmer);
+  font-family: var(--bs-font-gilmer);  
 }
 .patron-font{
   font-family: var(--bs-font-patron);

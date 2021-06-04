@@ -11,8 +11,28 @@
 
 <script src="script/icon.js" ></script>
 <link rel="icon" href="../images/favicon.png">
+<script src="script/progress-bar.js"></script>
 <style>
-html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
+  html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
+.active{
+  background-color: aqua;
+  box-shadow: 0px 0px 10px grey;
+}
+.notification {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+.notification .badge {
+  position: absolute;
+  right: 6px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
 </style>
 <body class="w3-light-grey ">
 
@@ -30,9 +50,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Admin</strong></span><br>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      <a href="#" class="w3-bar-item w3-button notification">
+        <span><img class="width-50" src="../images/svg/icons8_mail_1.svg"></span>
+        <span class="badge"></span>
+      </a>
+      <a href="#" class="w3-bar-item w3-button"><img class="width-50" src="../images/svg/services.svg"></a>
+      
     </div>
   </div>
   <hr>
@@ -41,14 +64,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-tv fa-fw"></i> Theatre Screens</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-calendar-alt fa-fw"></i>  Today Schedule</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wifi fa-fw"></i>  Online Booking</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wifi-slash fa-fw"></i>  Offline Booking</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sitemap fa-fw"></i>  Booking Status</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    <a href="#" class="w3-bar-item w3-button w3-padding active"><img class="width-30" src="../images/svg/reading.svg">  Overview</a>
+    <a href="theatre-screens.html" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/icons8_dolby_digital.svg"> Theatre Screens</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/calendar.svg">  Today Schedule</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/icons8_wi-fi.svg">  Online Booking</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/icons8_ticket_purchase.svg">  Offline Booking</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/parallel_tasks.svg">  Booking Status</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/list.svg">  History</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/settings.svg">  Settings</a><br><br>
   </div>
 </nav>
 
@@ -61,13 +84,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
 
   <!-- Header -->
   <header class="w3-container input-group " style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+    <h5><b><i class="fa fa-dashboard"></i> ARRS Multiplex, Salem</b></h5>
     <img src="../images/favicon.png" class="m-b-20 m-w-60 ms-md-auto flex-row flex-wrap" id="admin-logo">
   </header>
 
   <div class="w3-row-padding w3-margin-bottom">
     <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
+      <div class="w3-container w3-blue w3-padding-16">
         <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
         <div class="w3-right">
           <h3>52</h3>
@@ -77,7 +100,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
+      <div class="w3-container w3-red w3-padding-16">
         <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
         <div class="w3-right">
           <h3>99</h3>
@@ -118,38 +141,38 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
         <h5>Feeds</h5>
         <table class="w3-table w3-striped w3-white">
           <tr>
-            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-            <td>New record, over 90 views.</td>
+            <td><img class="width-30" src="../images/svg/icons8_add_list.svg"></td>
+            <td class="gd">New record, over 90 views.</td>
             <td><i>10 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>Database error.</td>
+            <td><img class="width-30" src="../images/svg/icons8_alarm.svg"></td>
+            <td class="gd">Database error.</td>
             <td><i>15 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-            <td>New record, over 40 users.</td>
+            <td><img class="width-30" src="../images/svg/icons8_group_task.svg"></td>
+            <td class="gd">New record, over 40 users.</td>
             <td><i>17 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-            <td>New comments.</td>
+            <td><img class="width-30" src="../images/svg/icons8_voice_recognition.svg"></td>
+            <td class="gd">New comments.</td>
             <td><i>25 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-            <td>Check transactions.</td>
+            <td><img class="width-30" src="../images/svg/icons8_visa.svg"></i></td>
+            <td class="gd">Check transactions.</td>
             <td><i>28 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-            <td>CPU overload.</td>
+            <td><img class="width-30" src="../images/svg/icons8_electronics.svg"></td>
+            <td class="gd">CPU overload.</td>
             <td><i>35 mins</i></td>
           </tr>
           <tr>
-            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-            <td>New shares.</td>
+            <td><img class="width-30" src="../images/svg/icons8_share.svg"></td>
+            <td class="gd">New shares.</td>
             <td><i>39 mins</i></td>
           </tr>
         </table>
@@ -160,7 +183,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "ralewayMedium"}
   <div class="w3-container">
     <h5>General Stats</h5>
     <p>New Visitors</p>
-    <div class="w3-grey">
+    <div class="w3-grey ">
       <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
     </div>
 
