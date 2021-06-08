@@ -99,6 +99,22 @@
     scroll-behavior: smooth;
   }
 }
+.butn{
+  display: inline-block;  
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -4073,6 +4089,16 @@ fieldset:disabled .btn {
 .navbar-dark .navbar-text a:focus,
 .navbar-dark .navbar-text a:hover {
   color: #fff;
+}
+.cardz{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
 }
 .card {
   position: relative;
