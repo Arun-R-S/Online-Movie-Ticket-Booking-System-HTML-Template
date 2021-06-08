@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css">
 <link rel="stylesheet" href="../bootstrap/bootstrap.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<script src="script/main.js"></script>
 <script src="script/icon.js"></script>
 <link rel="icon" href="../images/favicon.png">
 <script src="script/progress-bar.js"></script>
@@ -78,7 +78,7 @@
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/reading.svg"> 
+            <a href="index.html" class="w3-bar-item w3-button w3-padding"><img class="width-30" src="../images/svg/reading.svg"> 
                 Overview</a>
             <a href="#" class="w3-bar-item w3-button w3-padding active"><img class="width-30"
                     src="../images/svg/icons8_dolby_digital.svg"> Theatre Screens</a>
@@ -103,7 +103,7 @@
         title="close side menu" id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+    <div class="w3-main" style="margin-left:320px;margin-top:43px;">
 
         <!-- Header -->
         <header class="w3-container input-group " style="padding-top:22px">
@@ -112,14 +112,17 @@
         </header>
         <style>
             #screen {
-                overflow-x: scroll;
-            }
-
-            table {
                 border-collapse: separate;
                 border-spacing: 0 1em;
-                width: 1000px;
-                
+                width: 100%;
+                min-width: 700px;
+                padding-left: 20px;
+                padding-right: 20px;
+                overflow-x: scroll;
+                table-layout: fixed;
+            }
+            #overflow{
+                overflow-x: auto;
             }
 
             td {
@@ -150,7 +153,7 @@
                 </h2>
                 
             </div>
-
+        <div id="overflow">
             <table id="screen">
                 <tr>
                     <th colspan="26" style="text-align: center; font-size: 50px;" class="p-b-20">
@@ -1017,6 +1020,7 @@
                     <h3>Platinum</h3>
                 </td>
             </table>
+            </div>
         </div>
 
 

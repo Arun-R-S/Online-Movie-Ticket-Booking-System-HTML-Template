@@ -41,7 +41,7 @@ var district = [
  ];
  
 for(i=0;i<district.length;i++){
-    document.getElementById('location-result').innerHTML += '<li><a onclick="set(this.id)" class="dropdown-item" href="#" id="dis'+i+'">'+district[i]+'</a></li>';
+    document.getElementById('location-result').innerHTML += '<li><a onclick="set(this.id)" class="dropdown-item" href="javascript:void(0)" id="dis'+i+'">'+district[i]+'</a></li>';
 
 }
 
