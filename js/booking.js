@@ -2,7 +2,7 @@ let arr = new Set();
 function randomNumber(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-console.log(rndInt)
+
 function deselect(name) {
     arr.delete(name);
     document.getElementsByName(name)[0].removeAttribute("style");
@@ -43,7 +43,7 @@ function generate_table() {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_not_available');
                 td.setAttribute('name', seatno + j);
-                td.setAttribute('onclick', 'select(\'' + seatno + j + '\')');
+                
                 var img = document.createElement('img');
                 img.setAttribute('src', '/images/seat/seat_cross.svg');
                 
@@ -56,7 +56,7 @@ function generate_table() {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_not_available');
                 td.setAttribute('name', seatno + j);
-                td.setAttribute('onclick', 'select(\'' + seatno + j + '\')');
+                
                 var img = document.createElement('img');
                 img.setAttribute('src', '/images/seat/seat_red.svg');
                 td.appendChild(img);
