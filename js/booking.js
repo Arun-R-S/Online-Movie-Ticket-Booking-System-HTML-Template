@@ -45,7 +45,7 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
                 
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/seat/seat_cross.svg');
+                img.setAttribute('src', 'images/seat/seat_cross.svg');
                 
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
