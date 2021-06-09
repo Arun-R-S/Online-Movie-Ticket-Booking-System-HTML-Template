@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/compact_util.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/material-icon-outlined.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/booking.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <meta name="theme-color" content="#1a237e">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="gilmer-font bg-light" onload="generate_table()">
+    <!--Header Start-->
+    <header class="navbar p-t-5 p-b-5 shadow-bottom fixed-top navbar-expand-md navbar-dark bd-navbar bg-purple"
+        >
+        <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+            <a class=" navbar-brand me-2 f-w-600" id="page-title" href="/" aria-label="Bootstrap">
+                <img src="images/favicon.png" class="width-50 "> MoviesYet
+            </a>
+        </nav>
+    </header>
+    <!--Header End-->
+    <!--Gap-->
+<div class="p-b-100"></div>
+    <!--Gap end-->
+    <!--Main Content Start-->
+    <style>
+    </style>
+    <script>  
+    document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)) {
+        return false;
+    }
+}  
+    </script>
+        <div class="container text-dark">
+            <h3 id="h3" class="btn-success b-r-4 padding-10 col-lg-4">ARRS Multiplex</h3>
+            <h4 id="h4">Screen 1 ~ Movie Name</h4>
+            <div id="screen">
+            </div>
+        </div>
+        <div class="container">
+        </div>
+        <footer class="p-t-10 p-b-10" style="position:fixed;bottom: 0px;background-color: rgb(221, 216, 216); width: 100%;text-align: center; box-shadow: 0px -1px 5px grey;" >
+            <span>
+                <img src="images/seat/seat.svg" class="m-w-30"> Available
+            </span>
+            <span>
+                <img src="images/seat/seat_red.svg" class="m-w-30 m-l-10">Booked 
+            </span>
+            <span>
+                <img src="images/seat/seat_cross.svg" class="m-w-30 m-l-10">
+                Not Available 
+            </span>
+            <span>
+                <img src="images/seat/seat.svg" style="background-color: rgb(93, 150, 7);border-radius: 3px;" class="m-l-10 m-w-30">Selected 
+            </span>
+        </footer>
+        <footer class="footer bg-light text-center m-b-50">
+            <!-- Copyrights -->
+            <div class="text-center py-4">
+                <div class="container text-center">
+                    <p class="text-muted mb-0 py-2"> MoviesYet © 2021 All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+<script src="js/navbar.js"></script>
+<script src="js/booking.js"></script>
+</html>

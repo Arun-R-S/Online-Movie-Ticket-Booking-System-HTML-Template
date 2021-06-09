@@ -4,6 +4,10 @@
     url('../images/background.png');
     
 }
+.footer{
+
+    width: 100%;
+}
 a{
     text-decoration: unset;
 }
