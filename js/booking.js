@@ -58,7 +58,7 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
                 
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/seat/seat_red.svg');
+                img.setAttribute('src', 'images/seat/seat_red.svg');
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
@@ -69,7 +69,7 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
                 td.setAttribute('onclick', 'select(\'' + seatno + j + '\')');
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/svg/seat.svg');
+                img.setAttribute('src', 'images/svg/seat.svg');
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
