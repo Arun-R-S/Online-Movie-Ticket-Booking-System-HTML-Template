@@ -17,14 +17,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
     <link href="css/booking.css" rel="stylesheet">
     <meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <meta name="theme-color" content="#1a237e">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <script type="text/javascript">
-    
-    </script>
+
+</script>
 
 <body class="gilmer-font bg-light" onload="generate_table(); initClock()">
     <!--Header Start-->
@@ -36,17 +37,17 @@
             <div id="dateTime" class="text-light m-r-9" style="right: 0%;position: absolute;">
                 <div class="datetime">
                     <div class="date">
-                      <span id="daynum"> </span>
-                      <span id="month"> </span>
-                      <span id="year"> </span>
+                        <span id="daynum"> </span>
+                        <span id="month"> </span>
+                        <span id="year"> </span>
                     </div>
                     <div class="time">
-                      <span id="hour"> </span>:
-                      <span id="minutes"> </span>:
-                      <span id="seconds"> </span>
-                      <span id="period"> </span>
+                        <span id="hour"> </span>:
+                        <span id="minutes"> </span>:
+                        <span id="seconds"> </span>
+                        <span id="period"> </span>
                     </div>
-                  </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -79,13 +80,13 @@
 
         }
     </style>
-
+    
     <div class="container text-dark ">
-        <h3 id="h3" >
+        <h3 id="h3">
             <table>
                 <tr>
                     <td style="border-bottom: 1px solid black;">
-                        ARRS Multiplex Theatre, Salem 
+                        ARRS Multiplex Theatre, Salem
                     </td>
                 </tr>
             </table>
@@ -105,6 +106,14 @@
                 <td><img src="images/svg/icons8_two_tickets.svg" class="m-w-40">Available Tickets</td>
                 <td id="ticket_available_status"> : 0</td>
             </tr>
+            </tr>
+            <td colspan="2" id="ticket_close_soon" class="bg-info " style="display: none;">
+                <img src="images/svg/icons8_warning.svg" class="m-w-40 m-h-30">Closing Soon
+            </td>
+            <td colspan="2" id="ticket_closed" class="bg-danger text-light" style="display: none;">
+                <img src="images/svg/icons8_warning.svg" class="m-w-40 m-h-30">Tickets Closed
+            </td>
+            </tr>
         </table>
         <!-- Button trigger modal -->
         <button onclick="load_res()" class="padding-1 col-lg-2"
@@ -113,7 +122,8 @@
             <img class="m-w-35 " style="vertical-align:bottom;" src="images/svg/icons8_shopping_cart_1.svg">
             Checkout
         </button>
-
+        
+        
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -136,6 +146,25 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="images/svg/icons8_warning.svg" class="m-w-60 m-h-60">
+                        
+                    </div>
+                    <div class="modal-body" id="modal-title">
+                        All seats are Booked
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                       
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
         <div id="screen" class="m-t-70">
         </div>
     </div>

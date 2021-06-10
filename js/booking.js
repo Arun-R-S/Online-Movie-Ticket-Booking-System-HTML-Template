@@ -51,10 +51,11 @@ function load_res() {
     var s = Array.from(arr).sort();
     document.getElementById('res').innerHTML = "";
     if (arr.size > 0) {
-        document.getElementById('modal-title').innerHTML = "Selected seats";
-        for (let key of arr) {
-            document.getElementById('res').innerHTML += key + ", ";
+        document.getElementById('modal-title').innerHTML = "Selected seats : "+arr.size;
+        for (var i =0 ;i<s.length-1;i++) {
+            document.getElementById('res').innerHTML += s[i] + ", ";
         }
+        document.getElementById('res').innerHTML += s[s.length-1];
     }
     else {
         document.getElementById('modal-title').innerHTML = "No Seats selected";
@@ -109,7 +110,7 @@ function generate_table() {
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
             }
-            else if (randomNumber(1, 25) % 10 == 0) {
+            else if (randomNumber(1, 25) % 2 == 0) {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_not_available');
                 td.setAttribute('name', seatno + j);
@@ -175,5 +176,23 @@ function generate_table() {
     }
     tbl.appendChild(tbdy);
     body.appendChild(tbl);
-    document.getElementById("ticket_available_status").innerHTML = " : " + document.querySelectorAll('[id=tbl_data]').length + " / " + total_row * total_seat_per_row;
+    var ticket_count = document.querySelectorAll('[id=tbl_data]').length;
+    document.getElementById("ticket_available_status").innerHTML = " : " + ticket_count + " / " + total_row * total_seat_per_row;
+
+    if(parseInt((ticket_count/(total_row * total_seat_per_row))*100)==0)
+    {
+        $("#exampleModal").modal('show');
+        document.getElementById("ticket_closed").style.display="block";
+        document.getElementById("ticket_close_soon").style.display="none";
+    }
+    else if(parseInt((ticket_count/(total_row * total_seat_per_row))*100)<20)
+    {
+        document.getElementById("ticket_closed").style.display="none";
+        document.getElementById("ticket_close_soon").style.display="block";
+    }
+    else
+    {
+        document.getElementById("ticket_closed").style.display="none";
+        document.getElementById("ticket_close_soon").style.display="none";
+    }
 }
