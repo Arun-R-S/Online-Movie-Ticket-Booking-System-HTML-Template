@@ -58,8 +58,13 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
 
                 var img = document.createElement('img');
+<<<<<<< HEAD
                 img.setAttribute('src', 'images/seat/seat_cross.svg');
 
+=======
+                img.setAttribute('src', 'Online-Movie-Ticket-Booking-System/images/seat/seat_cross.svg');
+                
+>>>>>>> 8d7ae054d030d7759425d3c5f392d0161e1c1654
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
@@ -70,7 +75,11 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
 
                 var img = document.createElement('img');
+<<<<<<< HEAD
                 img.setAttribute('src', 'images/seat/seat_red.svg');
+=======
+                img.setAttribute('src', 'Online-Movie-Ticket-Booking-System/images/seat/seat_red.svg');
+>>>>>>> 8d7ae054d030d7759425d3c5f392d0161e1c1654
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
@@ -81,7 +90,11 @@ function generate_table() {
                 td.setAttribute('name', seatno + j);
                 td.setAttribute('onclick', 'select(\'' + seatno + j + '\')');
                 var img = document.createElement('img');
+<<<<<<< HEAD
                 img.setAttribute('src', 'images/svg/seat.svg');
+=======
+                img.setAttribute('src', 'Online-Movie-Ticket-Booking-System/images/svg/seat.svg');
+>>>>>>> 8d7ae054d030d7759425d3c5f392d0161e1c1654
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
