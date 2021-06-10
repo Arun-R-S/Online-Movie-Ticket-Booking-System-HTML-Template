@@ -29,7 +29,7 @@
   src : url("/font/raleway/Raleway-ExtraBold.ttf");
 }
 @font-face{
-  font-family: "robotoMedium";
+  font-family: "robotoMediums";
   src : url("/font/Roboto-Medium.woff2") format('woff2');
 }
 
@@ -50,6 +50,9 @@
 }
 .raleway-extrabold-font{
   font-family: "ralewayExtraBold";
+}
+.roboto-font{
+  font-family: "robotoMediums";
 }
 :root {
   --bs-blue: #0d6efd;

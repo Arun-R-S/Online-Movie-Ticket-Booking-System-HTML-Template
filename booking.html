@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Book Tickets</title>
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -54,25 +54,55 @@
 }  
     </script>
         <div class="container text-dark">
+            
             <h3 id="h3" class="btn-success b-r-4 padding-10 col-lg-4">ARRS Multiplex</h3>
             <h4 id="h4">Screen 1 ~ Movie Name</h4>
+            <!-- Button trigger modal -->
+<button type="button" onclick="load_res()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Checkout
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-title">
+          Selected Seats
+        </div>
+        <div class="modal-body" id="res">
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
             <div id="screen">
             </div>
         </div>
+        <!-- Button trigger modal -->
+
         <div class="container">
+
         </div>
         <footer class="p-t-10 p-b-10" style="position:fixed;bottom: 0px;background-color: rgb(221, 216, 216); width: 100%;text-align: center; box-shadow: 0px -1px 5px grey;" >
-            <span>
+            <span class="border-1">
                 <img src="images/seat/seat.svg" class="m-w-30"> Available
             </span>
-            <span>
+            <span class="border-1">
                 <img src="images/seat/seat_red.svg" class="m-w-30 m-l-10">Booked 
             </span>
-            <span>
+            <span class="border-1">
                 <img src="images/seat/seat_cross.svg" class="m-w-30 m-l-10">
                 Not Available 
             </span>
-            <span>
+            <span class="border-1">
                 <img src="images/seat/seat.svg" style="background-color: rgb(93, 150, 7);border-radius: 3px;" class="m-l-10 m-w-30">Selected 
             </span>
         </footer>

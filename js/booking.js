@@ -2,6 +2,19 @@ let arr = new Set();
 function randomNumber(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+function load_res() {
+    var s = Array.from(arr).sort();
+    document.getElementById('res').innerHTML = "";
+    if (arr.size > 0) {
+        document.getElementById('modal-title').innerHTML = "Selected seats";
+        for (let key of arr) {
+            document.getElementById('res').innerHTML += key + ", ";
+        }
+    }
+    else {
+        document.getElementById('modal-title').innerHTML = "No Seats selected";
+    }
+}
 
 function deselect(name) {
     arr.delete(name);
@@ -24,7 +37,7 @@ function generate_table() {
     var tr = document.createElement('tr');
     var th = document.createElement('th');
     th.appendChild(document.createTextNode("Screen Facing this side"));
-    th.setAttribute('id','heading');
+    th.setAttribute('id', 'heading');
 
     th.setAttribute('colSpan', total_seat_per_row + 2);
 
@@ -43,33 +56,32 @@ function generate_table() {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_not_available');
                 td.setAttribute('name', seatno + j);
-                
+
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/seat/seat_cross.svg');
-                
+                img.setAttribute('src', 'images/seat/seat_cross.svg');
+
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
             }
-            else if(randomNumber(1,25)%10==0)
-            {
+            else if (randomNumber(1, 25) % 10 == 0) {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_not_available');
                 td.setAttribute('name', seatno + j);
-                
+
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/seat/seat_red.svg');
+                img.setAttribute('src', 'images/seat/seat_red.svg');
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
             }
-            else{
+            else {
                 var td = document.createElement('td');
                 td.setAttribute('id', 'tbl_data');
                 td.setAttribute('name', seatno + j);
                 td.setAttribute('onclick', 'select(\'' + seatno + j + '\')');
                 var img = document.createElement('img');
-                img.setAttribute('src', '/images/svg/seat.svg');
+                img.setAttribute('src', 'images/svg/seat.svg');
                 td.appendChild(img);
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
