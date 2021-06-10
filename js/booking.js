@@ -1,3 +1,48 @@
+function updateClock(){
+    var now = new Date();
+    var dname = now.getDay(),
+        mo = now.getMonth(),
+        dnum = now.getDate(),
+        yr = now.getFullYear(),
+        hou = now.getHours(),
+        min = now.getMinutes(),
+        sec = now.getSeconds(),
+        pe = "AM";
+
+        if(hou >= 12){
+          pe = "PM";
+        }
+        if(hou == 0){
+          hou = 12;
+        }
+        if(hou > 12){
+          hou = hou - 12;
+        }
+
+        Number.prototype.pad = function(digits){
+          for(var n = this.toString(); n.length < digits; n = 0 + n);
+          return n;
+        }
+
+        var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+        var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var ids = ["daynum", "month",  "year", "hour", "minutes", "seconds", "period"];
+        var values = [dnum.pad(2), months[mo],  yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+        for(var i = 0; i < ids.length; i++)
+        document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+  }
+
+  function initClock(){
+    updateClock();
+    window.setInterval("updateClock()", 1);
+  }
+
+
+
+
+
+
+
 let arr = new Set();
 function randomNumber(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -35,6 +80,7 @@ function generate_table() {
     tbl.setAttribute('id', 'tbl-screen');
     var tbdy = document.createElement('tbody');
     var tr = document.createElement('tr');
+    tr.setAttribute('id', 'heading_row')
     var th = document.createElement('th');
     th.appendChild(document.createTextNode("Screen Facing this side"));
     th.setAttribute('id', 'heading');
@@ -85,12 +131,18 @@ function generate_table() {
                 td.appendChild(document.createTextNode(j));
                 tr.appendChild(td);
             }
-            if (total_seat_per_row / 2 == j) {
+            if (parseInt(total_seat_per_row / 2) == j) {
                 var td = document.createElement('td');
                 td.appendChild(document.createTextNode(""));
                 tr.appendChild(td);
             }
+
         }
+        var td = document.createElement('td');
+        var seatno = String.fromCharCode(i + 65);
+        td.appendChild(document.createTextNode(seatno));
+        td.setAttribute('id', 'row_no');
+        tr.appendChild(td);
 
         tbdy.appendChild(tr);
         if (seatno == "C") {
@@ -111,7 +163,7 @@ function generate_table() {
             tr.appendChild(td);
             tbdy.appendChild(tr);
         }
-        if (seatno == "O") {
+        if (i==total_row-1) {
             var tr = document.createElement('tr');
             var td = document.createElement('td');
             td.setAttribute('colspan', total_seat_per_row + 3);
@@ -122,5 +174,6 @@ function generate_table() {
         }
     }
     tbl.appendChild(tbdy);
-    body.appendChild(tbl)
+    body.appendChild(tbl);
+    document.getElementById("ticket_available_status").innerHTML = " : " + document.querySelectorAll('[id=tbl_data]').length + " / " + total_row * total_seat_per_row;
 }
