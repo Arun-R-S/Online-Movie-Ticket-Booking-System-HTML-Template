@@ -83,7 +83,11 @@ function generate_table() {
     var tr = document.createElement('tr');
     tr.setAttribute('id', 'heading_row')
     var th = document.createElement('th');
-    th.appendChild(document.createTextNode("Screen Facing this side"));
+    var h2 = document.createElement('h2');
+    h2.setAttribute('id','heading-h2');
+
+    h2.appendChild(document.createTextNode("Screen Facing this side"));
+    th.appendChild(h2);
     th.setAttribute('id', 'heading');
 
     th.setAttribute('colSpan', total_seat_per_row + 2);
